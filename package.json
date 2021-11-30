@@ -1,9 +1,11 @@
 {
   "name": "vsbostro-extension",
   "displayName": "VsBostro extension",
+  "publisher": "ToukoJouko",
+  "repository": "https://github.com/ToukoJouko/VsBostro",
   "description": "Päivän menut suoraan konsoliisi",
   "icon": "bistro.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.62.0"
   },

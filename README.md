@@ -5,7 +5,7 @@
 Oletko kiireinen koodariukko tai -akka, kellä ei ole aikaa tehdä turhia google-hakuja tai etsiä ruokalistoja tuudosta?
 Jos olet, tämä Vs code-lisäosa on täydellinen juuri sinulle.
 
-VsBostro Extensionin avulla saat tulostettettua parhaiden opikelijaravintoloiden ruokalistat suoraan konsoliisi.
+VsBostro Extensionin avulla saat tulostettettua parhaiden opikelijaravintoloiden ruokalistat suoraan outputtina vs codeesi.
 Parhaat opiskelijaravintolat tarkoittavat siis UEF:n Joensuun kampuksella sijaitsevia Kampus Bistroa, Futuraa, Naturaa, Careliaa sekä Auraa.
 
 ## KOMENNOT
@@ -22,6 +22,7 @@ aura.menu
 ```
 
 Komennot kirjoitetaan Vs Coden Command Palettiin _(Ctrl + Shift + p)_, kun olet kirjoittanut komennon paina Enter-painiketta ja katso kun the magic happens.
+Komennon mukainen menu tulostuu OUTPUT konsoliin. OUTPUT-kanavan nimi on _VsBostro_
 
 ### KÄYTTÄJIEN KOKEMUKSIA
 
@@ -34,3 +35,7 @@ _Hesburger_, Mika 27 v.
 #### 0.0.1
 
 eka versio
+
+#### 0.0.2
+
+Nyt toimii :D

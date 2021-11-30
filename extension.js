@@ -9,6 +9,10 @@ const axios = require("axios");
 /**
  * @param {vscode.ExtensionContext} context
  */
+
+let outputChannel = vscode.window.createOutputChannel("VsBostro");
+outputChannel.show();
+
 function activate(context) {
   // The command has been defined in the package.json file
   // The commandId parameter must match the command field in package.json
@@ -37,33 +41,33 @@ function activate(context) {
           const lunchTime = response.data.MenusForDays[0].LunchTime;
 
           if (todaysMenu.length === 0) {
-            console.log(
+            outputChannel.append(
               "Ravintola on tänään suljettu, tai ruokaa ei ole saatavilla jostain muusta syystä."
             );
             vscode.window.showInformationMessage(":-(");
           } else {
-            console.log("\n\n\nBistro on tänään auki " + lunchTime);
-            console.log(
-              "-------------------------------------------------------------------------"
+            outputChannel.append("\n\n\nBistro on tänään auki " + lunchTime);
+            outputChannel.append(
+              "\n-------------------------------------------------------------------------\n"
             );
             todaysMenu.map((food) => {
-              console.log(food.Name + ":\n");
+              outputChannel.append(food.Name + ":\n\n");
               food.Components.map((component) => {
-                console.log(component);
+                outputChannel.append(component + "\n");
               });
-              console.log("\n" + food.Price);
-              console.log(
-                "-------------------------------------------------------------------------"
+              outputChannel.append("\n" + food.Price);
+              outputChannel.append(
+                "\n-------------------------------------------------------------------------\n"
               );
             });
-            console.log(
+            outputChannel.append(
               "(G) Gluteeniton, (L) Laktoositon, (VL) Vähälaktoosinen, (M) Maidoton, (*) Suomalaisten ravitsemussuositusten mukainen, (Veg) Soveltuu vegaaniruokavalioon, (VS) Sis. tuoretta valkosipulia, (A) Sis. allergeeneja"
             );
             vscode.window.showInformationMessage("SPONSORED BY: Kela🐀");
           }
         })
         .catch((error) => {
-          console.error(error.message);
+          outputChannel.append(error.message);
         });
     }
   );
@@ -79,33 +83,35 @@ function activate(context) {
           const lunchTime = response.data.MenusForDays[0].LunchTime;
 
           if (todaysMenu.length === 0) {
-            console.log(
+            outputChannel.append(
               "Ravintola on tänään suljettu, tai ruokaa ei ole saatavilla jostain muusta syystä."
             );
             vscode.window.showInformationMessage(":-(");
           } else {
-            console.log("\n\n\nFuturan ravintola on tänään auki " + lunchTime);
-            console.log(
-              "-------------------------------------------------------------------------"
+            outputChannel.append(
+              "\n\n\nFuturan ravintola on tänään auki " + lunchTime
+            );
+            outputChannel.append(
+              "\n-------------------------------------------------------------------------\n"
             );
             todaysMenu.map((food) => {
-              console.log(food.Name.toUpperCase() + ":\n");
+              outputChannel.append(food.Name.toUpperCase() + ":\n\n");
               food.Components.map((component) => {
-                console.log(component);
+                outputChannel.append(component + "\n");
               });
-              console.log("\n" + food.Price);
-              console.log(
-                "-------------------------------------------------------------------------"
+              outputChannel.append("\n" + food.Price);
+              outputChannel.append(
+                "\n-------------------------------------------------------------------------\n"
               );
             });
-            console.log(
+            outputChannel.append(
               "(G) Gluteeniton, (L) Laktoositon, (VL) Vähälaktoosinen, (M) Maidoton, (*) Suomalaisten ravitsemussuositusten mukainen, (Veg) Soveltuu vegaaniruokavalioon, (VS) Sis. tuoretta valkosipulia, (A) Sis. allergeeneja"
             );
             vscode.window.showInformationMessage("SPONSORED BY: Kela🐀");
           }
         })
         .catch((error) => {
-          console.error(error.message);
+          outputChannel.append(error.message);
         });
     }
   );
@@ -121,26 +127,28 @@ function activate(context) {
           const lunchTime = response.data.MenusForDays[0].LunchTime;
 
           if (todaysMenu.length === 0) {
-            console.log(
+            outputChannel.append(
               "Ravintola on tänään suljettu, tai ruokaa ei ole saatavilla jostain muusta syystä."
             );
             vscode.window.showInformationMessage(":-(");
           } else {
-            console.log("\n\n\nCarelian ravintola on tänään auki " + lunchTime);
-            console.log(
-              "-------------------------------------------------------------------------"
+            outputChannel.append(
+              "\n\n\nCarelian ravintola on tänään auki " + lunchTime
+            );
+            outputChannel.append(
+              "\n-------------------------------------------------------------------------\n"
             );
             todaysMenu.map((food) => {
-              console.log(food.Name.toUpperCase() + ":\n");
+              outputChannel.append(food.Name.toUpperCase() + ":\n\n");
               food.Components.map((component) => {
-                console.log(component);
+                outputChannel.append(component + "\n");
               });
-              console.log("\n" + food.Price);
-              console.log(
-                "-------------------------------------------------------------------------"
+              outputChannel.append("\n" + food.Price);
+              outputChannel.append(
+                "\n-------------------------------------------------------------------------\n"
               );
             });
-            console.log(
+            outputChannel.append(
               "(G) Gluteeniton, (L) Laktoositon, (VL) Vähälaktoosinen, (M) Maidoton, (*) Suomalaisten ravitsemussuositusten mukainen, (Veg) Soveltuu vegaaniruokavalioon, (VS) Sis. tuoretta valkosipulia, (A) Sis. allergeeneja"
             );
 
@@ -148,7 +156,7 @@ function activate(context) {
           }
         })
         .catch((error) => {
-          console.error(error.message);
+          outputChannel.append(error.message);
         });
     }
   );
@@ -164,33 +172,33 @@ function activate(context) {
           const lunchTime = response.data.MenusForDays[0].LunchTime;
 
           if (todaysMenu.length === 0) {
-            console.log(
+            outputChannel.append(
               "Ravintola on tänään suljettu, tai ruokaa ei ole saatavilla jostain muusta syystä."
             );
             vscode.window.showInformationMessage(":-(");
           } else {
-            console.log("\n\n\nAura on tänään auki " + lunchTime);
-            console.log(
-              "-------------------------------------------------------------------------"
+            outputChannel.append("\n\n\nAura on tänään auki " + lunchTime);
+            outputChannel.append(
+              "\n-------------------------------------------------------------------------\n"
             );
             todaysMenu.map((food) => {
-              console.log(food.Name.toUpperCase() + ":\n");
+              outputChannel.append(food.Name.toUpperCase() + ":\n\n");
               food.Components.map((component) => {
-                console.log(component);
+                outputChannel.append(component + "\n");
               });
-              console.log("\n" + food.Price);
-              console.log(
-                "-------------------------------------------------------------------------"
+              outputChannel.append("\n" + food.Price);
+              outputChannel.append(
+                "\n-------------------------------------------------------------------------\n"
               );
             });
-            console.log(
+            outputChannel.append(
               "(G) Gluteeniton, (L) Laktoositon, (VL) Vähälaktoosinen, (M) Maidoton, (*) Suomalaisten ravitsemussuositusten mukainen, (Veg) Soveltuu vegaaniruokavalioon, (VS) Sis. tuoretta valkosipulia, (A) Sis. allergeeneja"
             );
             vscode.window.showInformationMessage("SPONSORED BY: Kela🐀");
           }
         })
         .catch((error) => {
-          console.error(error.message);
+          outputChannel.append(error.message);
         });
     }
   );
@@ -206,41 +214,43 @@ function activate(context) {
           const lunchTime = response.data.MenusForDays[0].LunchTime;
 
           if (todaysMenu.length === 0) {
-            console.log(
+            outputChannel.append(
               "Ravintola on tänään suljettu, tai ruokaa ei ole saatavilla jostain muusta syystä."
             );
             vscode.window.showInformationMessage(":-(");
           } else {
-            console.log("\n\n\nNaturan ranvintola on tänään auki " + lunchTime);
-            console.log(
-              "-------------------------------------------------------------------------"
+            outputChannel.append(
+              "\n\n\nNaturan ranvintola on tänään auki " + lunchTime
+            );
+            outputChannel.append(
+              "\n-------------------------------------------------------------------------\n"
             );
             todaysMenu.map((food) => {
               if (food.Name === null) {
-                console.log("LISÄKSI:\n");
+                outputChannel.append("LISÄKSI:\n\n");
               } else {
-                console.log(food.Name.toUpperCase() + ":\n");
+                outputChannel.append(food.Name.toUpperCase() + ":\n\n");
               }
 
               food.Components.map((component) => {
-                console.log(component);
+                outputChannel.append(component + "\n");
               });
 
               if (food.Price !== null) {
-                console.log("\n" + food.Price);
+                outputChannel.append("\n" + food.Price);
               }
-              console.log(
-                "-------------------------------------------------------------------------"
+              outputChannel.append(
+                "\n-------------------------------------------------------------------------\n"
               );
             });
-            console.log(
+            outputChannel.append(
               "(G) Gluteeniton, (L) Laktoositon, (VL) Vähälaktoosinen, (M) Maidoton, (*) Suomalaisten ravitsemussuositusten mukainen, (Veg) Soveltuu vegaaniruokavalioon, (VS) Sis. tuoretta valkosipulia, (A) Sis. allergeeneja"
             );
             vscode.window.showInformationMessage("SPONSORED BY: Kela🐀");
           }
         })
         .catch((error) => {
-          console.error(error.message);
+          outputChannel.append(error.message);
         });
     }
   );
