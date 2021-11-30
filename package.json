@@ -1,0 +1,64 @@
+{
+  "name": "vsbostro-extension",
+  "displayName": "VsBostro extension",
+  "description": "Päivän menut suoraan konsoliisi",
+  "icon": "bistro.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.62.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vsbostro-extension.bistroMenu",
+    "onCommand:vsbostro-extension.futuraMenu",
+    "onCommand:vsbostro-extension.careliaMenu",
+    "onCommand:vsbostro-extension.auraMenu",
+    "onCommand:vsbostro-extension.naturaMenu"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vsbostro-extension.bistroMenu",
+        "title": "bistro.menu"
+      },
+      {
+        "command": "vsbostro-extension.futuraMenu",
+        "title": "futura.menu"
+      },
+      {
+        "command": "vsbostro-extension.careliaMenu",
+        "title": "carelia.menu"
+      },
+      {
+        "command": "vsbostro-extension.auraMenu",
+        "title": "aura.menu"
+      },
+      {
+        "command": "vsbostro-extension.naturaMenu",
+        "title": "natura.menu"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.62.0",
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "eslint": "^8.1.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.3",
+    "typescript": "^4.4.4",
+    "@vscode/test-electron": "^1.6.2"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
