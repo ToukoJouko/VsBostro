@@ -1,3 +1,5 @@
+![md-food-stockpile-2](https://user-images.githubusercontent.com/72581705/144013945-470ce1d5-29bf-44be-9900-eea01f8c935e.jpg)
+
 # VSBOSTRO
 
 Oletko kiireinen koodariukko tai -akka, kellä ei ole aikaa tehdä turhia google-hakuja tai etsiä ruokalistoja tuudosta?
