@@ -12,3 +12,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - eka versio ei toiminu ku olin käyttäny console.logia kaikkiin tulstuksiin niin ei mitää tietoja tullu näkyville :DDD
 - console.logit vaihdettu siis outputChannel.appendeihin, jotka ohjaa tulostukset määriteltyyn outputchanneliin
+
+## [0.0.3]
+
+- porvari.menu lisätty
+- output konsolin tyhjennys, sekä virhe viestien parannuksia
