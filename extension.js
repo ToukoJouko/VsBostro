@@ -366,7 +366,7 @@ function activate(context) {
           } else if (currentDayName === 4) {
             daysMenu(menuItemDict.TORSTAI);
           } else if (currentDayName === 5) {
-            daysMenu(menuItemDict.PREJANTAI);
+            daysMenu(menuItemDict.PERJANTAI);
           } else {
             outputChannel.append(
               "Ravintola on tänään suljettu, tai ruokaa ei ole saatavilla jostain muusta syystä."
